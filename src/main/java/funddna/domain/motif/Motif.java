@@ -16,7 +16,7 @@ public class Motif extends AbstractDomain {
     private Weightings weightings;
     private Analytics analytics;
     private Description description;
-    private Map<Field, String> tags;
+    private Map<Tag, String> tags;
     private boolean indexable;
     private String urlName;
 
@@ -104,11 +104,11 @@ public class Motif extends AbstractDomain {
         return this;
     }
 
-    public Map<Field, String> getTags() {
+    public Map<Tag, String> getTags() {
         return this.tags;
     }
 
-    public Motif setTags(Map<Field, String> tags) {
+    public Motif setTags(Map<Tag, String> tags) {
         this.tags = tags;
         return this;
     }

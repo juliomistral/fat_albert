@@ -1,6 +1,6 @@
 package funddna.domain.motif;
 
-public enum Field {
+public enum Tag {
     CATEGORY,
     INDUSTRY,
     FEATURED,

@@ -2,9 +2,6 @@ package funddna.domain.motif;
 
 import funddna.domain.AbstractDomain;
 
-import javax.persistence.Entity;
-
-@Entity
 public class Ticker extends AbstractDomain {
     private String pensonSymbol;
     private String companyName;

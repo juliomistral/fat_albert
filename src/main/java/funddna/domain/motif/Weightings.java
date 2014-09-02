@@ -3,6 +3,8 @@ package funddna.domain.motif;
 import funddna.domain.AbstractDomain;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Weightings extends AbstractDomain {
@@ -15,7 +17,7 @@ public class Weightings extends AbstractDomain {
     }
 
     public Weightings(List<Weighting> versions, int lastRebalanceVersionIndex, int currentVersionIndex) {
-        this.versions = versions == null ? null : new ArrayList<>(versions);
+        this.versions = versions == null ? null : new ArrayList<Weighting>(versions);
         this.lastRebalanceVersionIndex = lastRebalanceVersionIndex;
         this.currentVersionIndex = currentVersionIndex;
 
@@ -23,7 +25,7 @@ public class Weightings extends AbstractDomain {
 
     public List<Weighting> getVersions() {
         if (this.versions == null) {
-            this.versions = new ArrayList<>();
+            this.versions = new ArrayList<Weighting>();
         }
         return this.versions;
     }
